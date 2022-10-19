@@ -7,7 +7,15 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { AddStudentComponent } from './add-student/add-student.component';
 import { ViewStudentComponent } from './view-student/view-student.component';
 import { FormsModule } from '@angular/forms';
-
+import { RouterModule, Routes } from '@angular/router';
+const appRoutes:Routes=[
+  {
+    path:"",component:AddStudentComponent
+  }
+  {
+    path:"viewStudents",component:ViewStudentComponent
+  }
+]
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +26,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
