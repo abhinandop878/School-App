@@ -8,7 +8,9 @@ import { ApiService } from '../api.service';
 })
 export class ViewStudentComponent implements OnInit {
 
-  constructor(private myapi:ApiService) { }
+  constructor(private myapi:ApiService) {
+    this.fetchData()
+   }
   status:boolean=false
   fetchData=()=>{
     this.myapi.viewStudent().subscribe((data)=>{
