@@ -12,7 +12,7 @@ import {HttpClientModule} from '@angular/common/http';
 const appRoutes:Routes=[
   {
     path:"",component:AddStudentComponent
-  }
+  },
   {
     path:"viewStudents",component:ViewStudentComponent
   }

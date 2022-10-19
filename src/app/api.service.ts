@@ -6,11 +6,11 @@ import { Injectable } from '@angular/core';
 })
 export class ApiService {
 
-  constructor(private hhtp:HttpClient) { }
+  constructor(private http:HttpClient) { }
   viewStudent=()=>{
-    return this.hhtp.get("")
+    return this.http.get("http://localhost:8080/viewStudents")
   }
   addStudent=(data:any)=>{
-    return this.hhtp.post("",data)
+    return this.http.post("http://localhost:8080/addStudents",data)
   }
 }
